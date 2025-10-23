@@ -1,0 +1,6 @@
+When a user hits /user or /admin with Basic Auth credentials:
+Spring Security intercepts the request via SecurityFilterChain ( in SecurityConfig class)
+It extracts the username and password from the request.
+It calls your CustomUserDetailsService.loadUserByUsername() to fetch the user from the DB.
+It checks the password against the PasswordEncoder (BCrypt in your case).
+If valid, it grants access according to the role.

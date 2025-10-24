@@ -1,0 +1,152 @@
+.
+├── .git
+│   ├── COMMIT_EDITMSG
+│   ├── config
+│   ├── description
+│   ├── HEAD
+│   ├── hooks
+│   │   ├── applypatch-msg.sample
+│   │   ├── commit-msg.sample
+│   │   ├── fsmonitor-watchman.sample
+│   │   ├── post-update.sample
+│   │   ├── pre-applypatch.sample
+│   │   ├── pre-commit.sample
+│   │   ├── pre-merge-commit.sample
+│   │   ├── pre-push.sample
+│   │   ├── pre-rebase.sample
+│   │   ├── pre-receive.sample
+│   │   ├── prepare-commit-msg.sample
+│   │   ├── push-to-checkout.sample
+│   │   └── update.sample
+│   ├── index
+│   ├── info
+│   │   └── exclude
+│   ├── logs
+│   │   ├── HEAD
+│   │   └── refs
+│   │       ├── heads
+│   │       │   └── main
+│   │       └── remotes
+│   │           └── origin
+│   │               └── main
+│   ├── objects
+│   │   ├── 0a
+│   │   │   └── 7c366e7eac5aa3105444d424b6be258e1a2417
+│   │   ├── 10
+│   │   │   └── c5fd329722e3f2f40581a3129fde0ca12a9687
+│   │   ├── 22
+│   │   │   └── c109bbbe019ff32ea8305dd8262e5414ce3dee
+│   │   ├── 27
+│   │   │   └── 01e965898546af6f141d927fe60aa8480bf869
+│   │   ├── 28
+│   │   │   └── 5229c5fd10aeadc5739ca154cd326d6507270c
+│   │   ├── 2d
+│   │   │   └── a5dc23e4580df77f2fc47216599a8f2265d48d
+│   │   ├── 37
+│   │   │   └── 6c3409672053200a3208a0e33d85e60230c62c
+│   │   ├── 39
+│   │   │   └── ca11097a69a75e0e8476afdf51c38399ce4714
+│   │   ├── 3b
+│   │   │   └── 41682ac579fafb665abb4dfcdaa6aaaa712184
+│   │   ├── 41
+│   │   │   └── 2c87b3283ea6477eb208c1763c68f7d8e071fb
+│   │   ├── 45
+│   │   │   └── 2d44eceb46729f5e6f84922a9afa02d539483e
+│   │   ├── 47
+│   │   │   └── 9fbfc5ef533660dd8c6f4f391b21a458b5b824
+│   │   ├── 4a
+│   │   │   └── c3d42c772fe4f12656715dbe4d4fce3bd554b4
+│   │   ├── 66
+│   │   │   └── 7aaef0c891a18c6177b09b53418bf59c6ab91f
+│   │   ├── 6b
+│   │   │   ├── dad50fa4b3db5a9393d9781c3d7b2b8cd8e7a1
+│   │   │   └── f15c25c6c5b5cbbc8c71974699446aaa2d8029
+│   │   ├── 6f
+│   │   │   └── e30621a34c791f4f33c3358e6249528e55404e
+│   │   ├── 75
+│   │   │   └── ab7132ec5a6cb199657fea04e68927f1a0e4e9
+│   │   ├── 78
+│   │   │   └── fbb8b840ee497869d111fba26047064f9904e0
+│   │   ├── 7a
+│   │   │   └── 0c1f2aee86b7cda4f20e431d01faf2d8e894a9
+│   │   ├── 7c
+│   │   │   └── 4c43d01b4221fc297f3f9edc4da511b375ca33
+│   │   ├── 92
+│   │   │   └── 450f93273470af42eeee491874afb2039b700a
+│   │   ├── 98
+│   │   │   └── da9dd6d5a1328cb89beb307f9977dadd21c2e8
+│   │   ├── 9b
+│   │   │   └── a148e0d0f9c2bed1a09c32459e7732ec01ea95
+│   │   ├── a1
+│   │   │   └── 38524535ac9987c7c555dd5e725166e441d3c3
+│   │   ├── a4
+│   │   │   └── 0e93f44b3b756ef688d15575534287b6637f89
+│   │   ├── ac
+│   │   │   └── 1d837a6198d718cc21696ae3a0949f02c78241
+│   │   ├── b0
+│   │   │   └── 6f77bda628ae1b8c7c09018dfdc540d51b5513
+│   │   ├── bd
+│   │   │   └── 8896bf2217b46faa0291585e01ac1a3441a958
+│   │   ├── be
+│   │   │   └── da6c7c792da71f5314a50982f0aef01a854070
+│   │   ├── c0
+│   │   │   └── bcafe984fe33005eacbcfabe8b188e0f75afcd
+│   │   ├── cd
+│   │   │   └── 232c87664c79f2d4416256c54379a83a241ac8
+│   │   ├── d6
+│   │   │   └── 5a3025020d89440c439ea0c80ca352df11a74c
+│   │   ├── d7
+│   │   │   └── 7e3839a45ab82cbe078ae03b5cd447005c5d27
+│   │   ├── e1
+│   │   │   └── b4d23fd27459d19ef940cda69635371f1c6d77
+│   │   ├── e7
+│   │   │   └── 4a47e023651597087eed33e3e11145c82b6cc8
+│   │   ├── info
+│   │   └── pack
+│   └── refs
+│       ├── heads
+│       │   └── main
+│       ├── remotes
+│       │   └── origin
+│       │       └── main
+│       └── tags
+├── .gitattributes
+├── .gitignore
+├── .mvn
+│   └── wrapper
+│       └── maven-wrapper.properties
+├── HELP.md
+├── mvnw
+├── mvnw.cmd
+├── pom.xml
+├── project_structure.txt
+└── src
+    ├── main
+    │   ├── java
+    │   │   ├── com
+    │   │   │   └── security
+    │   │   │       └── securityDemo
+    │   │   │           ├── config
+    │   │   │           │   └── SecurityConfig.java
+    │   │   │           ├── controller
+    │   │   │           │   └── TestController.java
+    │   │   │           ├── model
+    │   │   │           │   └── User.java
+    │   │   │           ├── repository
+    │   │   │           │   └── UserRepository.java
+    │   │   │           ├── SecurityDemoApplication.java
+    │   │   │           └── service
+    │   │   │               └── CustomUserDetailsService.java
+    │   │   └── working
+    │   └── resources
+    │       ├── application.properties
+    │       ├── static
+    │       └── templates
+    └── test
+        └── java
+            └── com
+                └── security
+                    └── securityDemo
+                        └── SecurityDemoApplicationTests.java
+
+73 directories, 77 files

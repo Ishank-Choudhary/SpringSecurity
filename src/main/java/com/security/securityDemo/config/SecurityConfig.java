@@ -11,6 +11,7 @@ import org.springframework.security.config.annotation.authentication.configurati
 import org.springframework.security.config.annotation.method.configuration.EnableMethodSecurity;
 import org.springframework.security.config.annotation.web.builders.HttpSecurity;
 import org.springframework.security.config.annotation.web.configuration.EnableWebSecurity;
+import org.springframework.security.config.http.SessionCreationPolicy;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.security.web.SecurityFilterChain;
@@ -26,17 +27,35 @@ public class SecurityConfig {
     private CustomUserDetailsService customUserDetailsService;
 
    // This is where you tell Spring Security “Which URLs need what permissions?”
-    public SecurityFilterChain securityFilterChain(HttpSecurity httpSecurity) throws Exception{
-        httpSecurity
-                .csrf(csrf-> csrf.disable())
-                .authorizeHttpRequests(auth -> auth
-                        .requestMatchers("/user").hasRole("USER")
-                        .requestMatchers("/admin").hasRole("ADMIN")
-                        .anyRequest().authenticated()
-                )
-                .httpBasic(Customizer.withDefaults());
-        return httpSecurity.build();
-    }
+   @Bean
+   public SecurityFilterChain securityFilterChain(HttpSecurity http) throws Exception {
+       http
+               // Disable CSRF for simplicity (especially for H2 console)
+               .csrf(csrf -> csrf.disable())
+
+               // Authorize requests
+               .authorizeHttpRequests(auth -> auth
+                       .requestMatchers("/h2-console/**").permitAll() // allow H2 console
+                       .requestMatchers("/user").hasRole("USER")
+                       .requestMatchers("/admin").hasRole("ADMIN")
+                       .anyRequest().authenticated()
+               )
+
+               //By default, Spring Security blocks all pages that try to load inside frames — to protect against clickjacking attacks.
+               //So when you open
+               //👉 http://localhost:8080/h2-console
+               //the browser tries to load the H2 console web interface inside a frame.
+               .headers(headers -> headers.frameOptions(frame -> frame.sameOrigin()))
+
+               // Enable HTTP Basic auth with default behavior, no extra customization
+               .httpBasic(Customizer.withDefaults())
+
+               // Disable session creation (optional for stateless APIs)
+               .sessionManagement(session -> session.sessionCreationPolicy(SessionCreationPolicy.ALWAYS));
+
+       return http.build();
+   }
+
 
     //password encoder bean
     @Bean

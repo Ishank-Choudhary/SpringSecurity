@@ -1,12 +1,11 @@
-package com.security.securityDemo.config;
+package com.security.securityDemo.basicauth.config;
 
-import com.security.securityDemo.service.CustomUserDetailsService;
+import com.security.securityDemo.basicauth.config.service.CustomUserDetailsService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.security.authentication.AuthenticationManager;
 import org.springframework.security.config.Customizer;
-import org.springframework.security.config.annotation.authentication.builders.AuthenticationManagerBuilder;
 import org.springframework.security.config.annotation.authentication.configuration.AuthenticationConfiguration;
 import org.springframework.security.config.annotation.method.configuration.EnableMethodSecurity;
 import org.springframework.security.config.annotation.web.builders.HttpSecurity;
@@ -32,7 +31,6 @@ public class SecurityConfig {
        http
                // Disable CSRF for simplicity (especially for H2 console)
                .csrf(csrf -> csrf.disable())
-
                // Authorize requests
                .authorizeHttpRequests(auth -> auth
                        .requestMatchers("/h2-console/**").permitAll() // allow H2 console

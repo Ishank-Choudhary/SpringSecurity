@@ -1,4 +1,4 @@
-package com.security.securityDemo.model;
+package com.security.securityDemo.basicauth.config.model;
 
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;

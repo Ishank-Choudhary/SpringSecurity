@@ -1,4 +1,4 @@
-package com.security.securityDemo.controller;
+package com.security.securityDemo.basicauth.config.controller;
 
 import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.web.bind.annotation.GetMapping;

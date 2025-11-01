@@ -1,7 +1,7 @@
-package com.security.securityDemo.service;
+package com.security.securityDemo.basicauth.config.service;
 
-import com.security.securityDemo.model.User;
-import com.security.securityDemo.repository.UserRepository;
+import com.security.securityDemo.basicauth.config.model.User;
+import com.security.securityDemo.basicauth.config.repository.UserRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.core.userdetails.UserDetailsService;
@@ -19,10 +19,11 @@ public class CustomUserDetailsService implements UserDetailsService {
         User user = userRepository.findByUsername(username)
                 .orElseThrow(()-> new UsernameNotFoundException("user name not found!!!"));
 
+        //All the getters used below are the ones that we are getting from our User entity class using Lombok library.
         UserBuilder builder = org.springframework.security.core.userdetails.User.withUsername(user.getUsername())
                 .password(user.getPassword())
                 .roles(user.getRole());
+        // builder then uses these values to create a new UserDetails object via:
         return builder.build();
-
     }
 }

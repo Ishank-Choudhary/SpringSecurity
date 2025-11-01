@@ -1,6 +1,6 @@
-package com.security.securityDemo.repository;
+package com.security.securityDemo.basicauth.config.repository;
 
-import com.security.securityDemo.model.User;
+import com.security.securityDemo.basicauth.config.model.User;
 import org.springframework.data.jpa.repository.JpaRepository;
 
 import java.util.Optional;

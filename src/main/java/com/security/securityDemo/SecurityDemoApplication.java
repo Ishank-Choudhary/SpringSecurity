@@ -1,7 +1,7 @@
 package com.security.securityDemo;
 
-import com.security.securityDemo.model.User;
-import com.security.securityDemo.repository.UserRepository;
+import com.security.securityDemo.basicauth.config.model.User;
+import com.security.securityDemo.basicauth.config.repository.UserRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;

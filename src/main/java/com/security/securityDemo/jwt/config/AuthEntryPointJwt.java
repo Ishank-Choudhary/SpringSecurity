@@ -27,6 +27,8 @@ It decides how to respond to unauthorized access — instead of showing a defaul
 // AuthEntryPointJwt is only responsible for returning an error response, when token is invalid or missing
 public class AuthEntryPointJwt implements AuthenticationEntryPoint {
 
+    // here we are putting the class name AuthEntryPointJwt in the getLOgger method - it will help in the logs so that we can know
+    // from which class the logs are coming.
     private static final Logger logger = LoggerFactory.getLogger(AuthEntryPointJwt.class);
 
     @Override

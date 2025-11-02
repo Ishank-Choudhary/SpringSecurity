@@ -19,6 +19,7 @@ import java.util.Base64;
 import java.util.Date;
 import java.security.Key;
 
+// After the username and password are authenticated then this class will generate the token
 
 @Component
 public class JwtUtil {

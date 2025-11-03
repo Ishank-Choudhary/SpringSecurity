@@ -18,7 +18,7 @@ public class SecurityDemoApplication {
 	@Bean
 	CommandLineRunner run(UserRepository userRepository) {
 		return args -> {
-			userRepository.save(new User(null, "user1", passwordEncoder.encode("12345"), "USER"));
+			userRepository.save(new User(null, "ishank", passwordEncoder.encode("12345"), "USER"));
 			userRepository.save(new User(null, "admin", passwordEncoder.encode("Admin12345"), "ADMIN"));
 		};
 	}

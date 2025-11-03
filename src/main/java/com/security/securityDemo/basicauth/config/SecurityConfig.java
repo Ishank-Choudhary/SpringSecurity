@@ -48,7 +48,7 @@ public class SecurityConfig {
 //             Authorize requests
                .authorizeHttpRequests(auth -> auth
                        .requestMatchers("/h2-console/**").permitAll() // allow H2 console
-                       .requestMatchers("/api/auth/**").permitAll()
+                       .requestMatchers("/signin").permitAll()
                        .requestMatchers("/user").hasRole("USER")
                        .requestMatchers("/admin").hasRole("ADMIN")
                        .anyRequest().authenticated()
@@ -64,7 +64,7 @@ public class SecurityConfig {
 //              .httpBasic(Customizer.withDefaults())
 
 //              Disable session creation (optional for stateless APIs)
-               .sessionManagement(session -> session.sessionCreationPolicy(SessionCreationPolicy.ALWAYS));
+               .sessionManagement(session -> session.sessionCreationPolicy(SessionCreationPolicy.STATELESS));
 
 //     ✅ Add JWT filter before Spring’s UsernamePasswordAuthenticationFilter
        http.addFilterBefore(authTokenFilter(), UsernamePasswordAuthenticationFilter.class);

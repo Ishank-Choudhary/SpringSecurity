@@ -80,8 +80,7 @@ public class TestController {
                 .map(item-> item.getAuthority())
                 .collect(Collectors.toList());
 //      Preparing the response that includes username, token, and roles.
-        LoginResponse response = new LoginResponse(userDetails.getUsername(),
-                jwtToken,roles);
+        LoginResponse response = new LoginResponse(jwtToken,userDetails.getUsername(),roles);
         return ResponseEntity.ok(response);
     }
 }
